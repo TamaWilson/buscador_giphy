@@ -8,4 +8,7 @@ Projeto 5 do curso [Criação de Apps Android e iOS com Flutter](https://www.ude
 - Adicionado controller no campo de texto
 - Clicar na Appbar retorna para a tela inicial
 
+# Revisão 2021
+- Adaptando código para Flutter 2.0 e compatibilidade web
+
 <img src="./screenshot.png" width="200">
