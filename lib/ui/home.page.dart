@@ -94,7 +94,33 @@ class _HomePageState extends State<HomePage> {
                       );
                     default:
                       if (snapshot.hasError) {
-                        return Container();
+                        return Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                              Icons.error_outline,
+                              color: Colors.amber,
+                              size: 140.0,
+                            ),
+                            Divider(),
+                            Text(
+                              "ERRO AO CARREGAR DADOS",
+                              style: TextStyle(
+                                  color: Colors.amber, fontSize: 20.0),
+                            ),
+                            Divider(),
+                            TextButton(
+                              style:
+                                  TextButton.styleFrom(primary: Colors.amber),
+                              child: Text("RECARREGAR"),
+                              onPressed: () {
+                                setState(() {
+                                  _getGifs();
+                                });
+                              },
+                            )
+                          ],
+                        );
                       }
                       return _createGifTable(context, snapshot);
                   }
